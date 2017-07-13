@@ -1,4 +1,5 @@
 var VideoPlayer = (props) => {
+
   let path = 'https://www.youtube.com/embed/' + props.video.id.videoId;
   let videoTitle = props.video.snippet.title;
   let videoDescription = props.video.snippet.description;

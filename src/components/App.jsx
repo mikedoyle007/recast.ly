@@ -2,16 +2,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentVideo: exampleVideoData[0],
-
+      currentVideo: exampleVideoData[0]
     };
   }
 
-  onListClick() {
-    console.log('clicked', this);
+  onListClick(videoObj) {
     this.setState({
-      currentVideo: 'https://www.youtube.com/embed/' + this.state.currentVideo.id.videoId
+      currentVideo: videoObj
     });
+    console.log('clicked');
+    console.log('video obj', videoObj);
   }
 
   render () {
@@ -19,10 +19,10 @@ class App extends React.Component {
       <div>
         <Nav />
         <div className="col-md-7">
-          <VideoPlayer video={exampleVideoData[0]}/>
+          <VideoPlayer video={this.state.currentVideo} />
         </div>
-        <div onClick={this.onListClick.bind(this)} className="col-md-5">
-          <VideoList videos={exampleVideoData}/>
+        <div className="col-md-5">
+          <VideoList click={this.onListClick.bind(this)} videos={exampleVideoData} />
         </div>
       </div>
     );

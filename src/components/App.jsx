@@ -1,6 +1,14 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentVideo: exampleVideoData[0],
+
+    };
+  }
+
+  onListClick() {
+    console.log('clicked');
   }
 
   render () {
@@ -10,7 +18,7 @@ class App extends React.Component {
         <div className="col-md-7">
           <VideoPlayer video={exampleVideoData[0]}/>
         </div>
-        <div className="col-md-5">
+        <div onClick={this.onListClick.bind(this)} className="col-md-5">
           <VideoList videos={exampleVideoData}/>
         </div>
       </div>

@@ -3,7 +3,6 @@ var VideoPlayer = (props) => {
   let videoTitle = props.video.snippet.title;
   let videoDescription = props.video.snippet.description;
 
-  
   return (
     <div className="video-player">
       <div className="embed-responsive embed-responsive-16by9">

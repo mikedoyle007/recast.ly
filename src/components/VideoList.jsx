@@ -21,20 +21,3 @@ VideoList.propTypes = {
 window.VideoList = VideoList;
 
 
-/*
-<VideoListEntry />
-<VideoListEntry />
-
-<ul>
-  {
-    let VideoListEntry = (props) => {
-      return (
-        {
-          props.videos.map( video => 
-            <VideoListEntry videos={video} />
-        )}
-      );
-    };
-  }
-</ul>
-*/

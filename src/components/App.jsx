@@ -8,7 +8,10 @@ class App extends React.Component {
   }
 
   onListClick() {
-    console.log('clicked');
+    console.log('clicked', this);
+    this.setState({
+      currentVideo: 'https://www.youtube.com/embed/' + this.state.currentVideo.id.videoId
+    });
   }
 
   render () {

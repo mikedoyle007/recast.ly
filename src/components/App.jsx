@@ -10,8 +10,6 @@ class App extends React.Component {
     this.setState({
       currentVideo: videoObj
     });
-    console.log('clicked');
-    console.log('video obj', videoObj);
   }
 
   render () {

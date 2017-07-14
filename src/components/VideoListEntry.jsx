@@ -1,4 +1,5 @@
 var VideoListEntry = (props) => {
+
   let handleVideo = function() {
     props.click(props.video);
   };
